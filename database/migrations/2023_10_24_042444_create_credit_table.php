@@ -16,9 +16,9 @@ return new class extends Migration
             $table->bigInteger('user_id');
             $table->string('credit_type');
             $table->string('name');
-            $table->float('total_transaction');
-            $table->date('tenor');
-            $table->float('total_credit');
+            $table->float('total_transaction', 10, 2);
+            $table->integer('tenor');
+            $table->float('total_credit', 10, 2);
             $table->string('status');
             $table->timestamps();
         });

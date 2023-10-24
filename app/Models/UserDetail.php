@@ -14,4 +14,9 @@ class UserDetail extends Model
     protected $fillable = [
         'user_id', 'first_name', 'last_name', 'address', 'gender', 'date_of_birth', 'img_KTP'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
+    }
 }

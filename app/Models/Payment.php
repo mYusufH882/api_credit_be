@@ -14,4 +14,9 @@ class Payment extends Model
     protected $fillable = [
         'credit_id', 'amount', 'status'
     ];
+
+    public function credit()
+    {
+        return $this->belongsTo(Credit::class, 'credit_id', 'id');
+    }
 }
